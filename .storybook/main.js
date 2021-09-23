@@ -1,4 +1,5 @@
 const path = require("path");
+const toPath = (filePath) => path.join(process.cwd(), filePath);
 
 module.exports = {
   webpackFinal: async (config) => {
@@ -7,6 +8,8 @@ module.exports = {
       ...config.resolve.alias,
       "@components": path.resolve(__dirname, "../components"),
       "@components/common": path.resolve(__dirname, "../components/common"),
+      "@emotion/core": toPath("node_modules/@emotion/react"),
+      "emotion-theming": toPath("node_modules/@emotion/react"),
     };
     return config;
   },
