@@ -1,9 +1,7 @@
 import React from "react";
 import NextHead from "next/head";
 
-interface Props {}
-
-const Head = (props: Props) => {
+const Head = (): JSX.Element => {
   return (
     <NextHead>
       <title>App title</title>
