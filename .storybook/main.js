@@ -15,4 +15,7 @@ module.exports = {
   },
   stories: ["../components/**/*.stories.@(js|jsx|ts|tsx|mdx)"],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  typescript: {
+    reactDocgen: "react-docgen", // this option will take compile time from 9 secs to less than 1 sec on refresh
+  },
 };
